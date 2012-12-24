@@ -1,21 +1,4 @@
-#include <stdlib.h>
-
-#include <GLUT/glut.h>
-
-/*
- * CONSTANTS
- */
-
-const double BOX_MOVE_DISTANCE = 5.0f;
-const double BOX_MOVE_INTERVAL = 20.0f;
-
-/*
- * GLOBAL VARIABLES
- */
-
-int last_frame_time     = 0;
-double box_X            = 0;
-double move_rate        = BOX_MOVE_DISTANCE;
+#include "main.h"
 
 /*
  * FUNCTION DEFINITIONS
@@ -30,10 +13,10 @@ void display(void)
         return;
     }
  
-    int windowWidth = glutGet(GLUT_WINDOW_WIDTH);
+    int window_width = glutGet(GLUT_WINDOW_WIDTH);
     
     box_X += move_rate;
-    if (box_X > windowWidth || box_X < 0)
+    if (box_X > window_width || box_X < 0)
     {
         move_rate = -move_rate;
     }
