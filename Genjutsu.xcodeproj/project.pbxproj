@@ -10,7 +10,6 @@
 		21F9334A16881612009FF5CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9334916881612009FF5CA /* Cocoa.framework */; };
 		21F9335416881612009FF5CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335216881612009FF5CA /* InfoPlist.strings */; };
 		21F9335A16881612009FF5CA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335816881612009FF5CA /* Credits.rtf */; };
-		21F9335D16881612009FF5CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F9335C16881612009FF5CA /* AppDelegate.m */; };
 		21F9336016881613009FF5CA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335E16881613009FF5CA /* MainMenu.xib */; };
 		21F9336816881613009FF5CA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9336716881613009FF5CA /* SenTestingKit.framework */; };
 		21F9336916881613009FF5CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9334916881612009FF5CA /* Cocoa.framework */; };
@@ -41,8 +40,6 @@
 		21F9335316881612009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21F9335716881612009FF5CA /* Genjutsu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Genjutsu-Prefix.pch"; sourceTree = "<group>"; };
 		21F9335916881612009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		21F9335B16881612009FF5CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		21F9335C16881612009FF5CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		21F9335F16881613009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		21F9336616881613009FF5CA /* GenjutsuTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenjutsuTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F9336716881613009FF5CA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,8 +119,6 @@
 		21F9334F16881612009FF5CA /* Genjutsu */ = {
 			isa = PBXGroup;
 			children = (
-				21F9335B16881612009FF5CA /* AppDelegate.h */,
-				21F9335C16881612009FF5CA /* AppDelegate.m */,
 				21F9335E16881613009FF5CA /* MainMenu.xib */,
 				21F9335016881612009FF5CA /* Supporting Files */,
 				21F9338216881F42009FF5CA /* main.cpp */,
@@ -268,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F9335D16881612009FF5CA /* AppDelegate.m in Sources */,
 				21F9338316881F42009FF5CA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +488,7 @@
 				21F9337616881613009FF5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21F9337A16881613009FF5CA /* Build configuration list for PBXNativeTarget "GenjutsuTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +497,7 @@
 				21F9337816881613009FF5CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
