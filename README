@@ -1,0 +1,3 @@
+A project to play around with OpenGL graphics on various Unix platforms.
+
+Current experiment is for OpenGL with XCode, based on the example at https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_drawing/opengl_drawing.html.
