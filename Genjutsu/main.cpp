@@ -6,9 +6,16 @@
  * CONSTANTS
  */
 
-int lastFrameTime = 0;
+const double BOX_MOVE_DISTANCE = 5.0f;
+const double BOX_MOVE_INTERVAL = 20.0f;
 
-float boxX = 0.0f;
+/*
+ * GLOBAL VARIABLES
+ */
+
+int last_frame_time     = 0;
+double box_X            = 0;
+double move_rate        = BOX_MOVE_DISTANCE;
 
 /*
  * FUNCTION DEFINITIONS
@@ -16,38 +23,39 @@ float boxX = 0.0f;
 
 void display(void)
 {
-    if (lastFrameTime == 0)
+    int now = glutGet(GLUT_ELAPSED_TIME);
+    if (now - last_frame_time < BOX_MOVE_INTERVAL)
     {
-        lastFrameTime = glutGet(GLUT_ELAPSED_TIME);
+        // It's not yet time to update the frame
+        return;
     }
  
-    int now = glutGet(GLUT_ELAPSED_TIME);
-    int elapsedMilliseconds = now - lastFrameTime;
-    float elapsedTime = elapsedMilliseconds / 1000.0f;
-    lastFrameTime = now;
-    
     int windowWidth = glutGet(GLUT_WINDOW_WIDTH);
     
-    boxX += 512.0f * elapsedTime;
-    if (boxX > windowWidth)
+    box_X += move_rate;
+    if (box_X > windowWidth || box_X < 0)
     {
-        boxX -= windowWidth;
+        move_rate = -move_rate;
     }
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     glPushMatrix();
-    glTranslatef(boxX, 0.0f, 0.0f);
+    glTranslatef(box_X, 0.0f, 0.0f);
     
     glBegin(GL_QUADS);
     glVertex2f(  0.0f,   0.0f);
     glVertex2f(128.0f,   0.0f);
+    glVertex2f( 64.0f, 140.0f);
     glVertex2f(128.0f, 128.0f);
     glVertex2f(  0.0f, 128.0f);
     glEnd();
     glPopMatrix();
     
     glutSwapBuffers();
+    
+    // Update the last update time
+    last_frame_time = now;
 }
 
 void reshape(int width, int height)
