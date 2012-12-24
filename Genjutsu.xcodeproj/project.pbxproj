@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212094F316882AA20054DE63 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		21F9334516881612009FF5CA /* Genjutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genjutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F9334916881612009FF5CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		21F9334C16881612009FF5CA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -122,6 +123,7 @@
 				21F9335E16881613009FF5CA /* MainMenu.xib */,
 				21F9335016881612009FF5CA /* Supporting Files */,
 				21F9338216881F42009FF5CA /* main.cpp */,
+				212094F316882AA20054DE63 /* main.h */,
 			);
 			path = Genjutsu;
 			sourceTree = "<group>";
