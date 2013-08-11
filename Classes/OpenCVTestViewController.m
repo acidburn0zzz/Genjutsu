@@ -82,32 +82,39 @@
 - (void)opencvEdgeDetect {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 
-	if(imageView.image) {
+	if (imageView.image != NULL) {
 		cvSetErrMode(CV_ErrModeParent);
-
-		// Create grayscale IplImage from UIImage
-		IplImage *img_color = [self CreateIplImageFromUIImage:imageView.image];
-		IplImage *img = cvCreateImage(cvGetSize(img_color), IPL_DEPTH_8U, 1);
-		cvCvtColor(img_color, img, CV_BGR2GRAY);
-		cvReleaseImage(&img_color);
-		
-		// Detect edge
-		IplImage *img2 = cvCreateImage(cvGetSize(img), IPL_DEPTH_8U, 1);
-		cvCanny(img, img2, 64, 128, 3);
-		cvReleaseImage(&img);
-		
-		// Convert black and whilte to 24bit image then convert to UIImage to show
-		IplImage *image = cvCreateImage(cvGetSize(img2), IPL_DEPTH_8U, 3);
-		for(int y=0; y<img2->height; y++) {
-			for(int x=0; x<img2->width; x++) {
-				char *p = image->imageData + y * image->widthStep + x * 3;
-				*p = *(p+1) = *(p+2) = img2->imageData[y * img2->widthStep + x];
+        
+        // Convert the image into an HSV image
+        IplImage *imageColor = [self CreateIplImageFromUIImage:imageView.image];
+        IplImage *imageThreshed = cvCreateImage(cvGetSize(imageColor), 8, 3);
+        
+        // Convert black and white to 24bit image then convert to UIImage to show
+		for(int y = 0; y < imageThreshed->height; y++)
+        {
+			for(int x = 0; x < imageThreshed->width; x++)
+            {
+				char* data = imageColor->imageData + y * imageColor->widthStep + x * 3;
+                
+                uint8_t B = data[0];
+                uint8_t G = data[1];
+                uint8_t R = data[2];
+                
+                uint8_t newColor;
+                if ((R >= 210 && B <= 150 && G <= 150) || R >= B + G)
+                    newColor = 255;
+                else
+                    newColor = 0;
+                
+                char *p = imageThreshed->imageData + y * imageThreshed->widthStep + x * 3;
+				*p = *(p+1) = *(p+2) = newColor;
 			}
 		}
-		cvReleaseImage(&img2);
-		imageView.image = [self UIImageFromIplImage:image];
-		cvReleaseImage(&image);
-
+        
+        cvReleaseImage(&imageColor);
+        
+        imageView.image = [self UIImageFromIplImage:imageThreshed];
+        
 		[self hideProgressIndicator];
 	}
 
