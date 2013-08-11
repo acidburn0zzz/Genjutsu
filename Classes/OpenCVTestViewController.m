@@ -185,7 +185,7 @@
 	if(!actionSheetAction) {
 		UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
 																 delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
-														otherButtonTitles:@"Use Photo from Library", @"Take Photo with Camera", @"Use Default Lena", nil];
+														otherButtonTitles:@"Use Photo from Library", @"Take Photo with Camera", @"Test 1", @"Test 2", nil];
 		actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 		actionSheetAction = ActionSheetToSelectTypeOfSource;
 		[actionSheet showInView:self.view];
@@ -250,7 +250,11 @@
 			} else if(buttonIndex == 1) {
 				sourceType = UIImagePickerControllerSourceTypeCamera;
 			} else if(buttonIndex == 2) {
-				NSString *path = [[NSBundle mainBundle] pathForResource:@"lena" ofType:@"jpg"];
+				NSString *path = [[NSBundle mainBundle] pathForResource:@"test_hand_1" ofType:@"jpg"];
+				imageView.image = [UIImage imageWithContentsOfFile:path];
+				break;
+            } else if(buttonIndex == 3) {
+				NSString *path = [[NSBundle mainBundle] pathForResource:@"test_hand_2" ofType:@"jpg"];
 				imageView.image = [UIImage imageWithContentsOfFile:path];
 				break;
 			} else {
@@ -261,8 +265,8 @@
 				UIImagePickerController *picker = [[UIImagePickerController alloc] init];
 				picker.sourceType = sourceType;
 				picker.delegate = self;
-				picker.allowsImageEditing = NO;
-				[self presentModalViewController:picker animated:YES];
+                picker.allowsEditing = NO;
+				[self presentViewController:picker animated:true completion:NULL];
 				[picker release];
 			}
 			break;
@@ -389,6 +393,6 @@
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-	[[picker parentViewController] dismissModalViewControllerAnimated:YES];
+	[[picker parentViewController] dismissViewControllerAnimated:true completion:NULL];
 }
 @end
