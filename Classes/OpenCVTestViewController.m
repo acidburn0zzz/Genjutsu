@@ -85,35 +85,73 @@
 	if (imageView.image != NULL) {
 		cvSetErrMode(CV_ErrModeParent);
         
-        // Convert the image into an HSV image
-        IplImage *imageColor = [self CreateIplImageFromUIImage:imageView.image];
-        IplImage *imageThreshed = cvCreateImage(cvGetSize(imageColor), 8, 3);
+        IplImage *image = [self CreateIplImageFromUIImage:imageView.image];
         
-        // Convert black and white to 24bit image then convert to UIImage to show
-		for(int y = 0; y < imageThreshed->height; y++)
+        uint16_t height = image->height;
+        uint16_t width = image->width;
+        
+        // Locate pixels that may be part of the user's hand
+        IplImage *thresholdedHandImage = cvCreateImage(cvGetSize(image), 8, 1);
+        
+		for (uint16_t y = 0; y < height; y++)
         {
-			for(int x = 0; x < imageThreshed->width; x++)
+			for (uint16_t x = 0; x < width; x++)
             {
-				char* data = imageColor->imageData + y * imageColor->widthStep + x * 3;
+				char* data = image->imageData + y * image->widthStep + x * 3;
                 
                 uint8_t B = data[0];
                 uint8_t G = data[1];
                 uint8_t R = data[2];
                 
+                // Use color-based rules to detect hand
                 uint8_t newColor;
                 if ((R >= 210 && B <= 150 && G <= 150) || R >= B + G)
                     newColor = 255;
                 else
                     newColor = 0;
                 
-                char *p = imageThreshed->imageData + y * imageThreshed->widthStep + x * 3;
-				*p = *(p+1) = *(p+2) = newColor;
+                char *p = thresholdedHandImage->imageData + y * thresholdedHandImage->widthStep + x;
+				*p = newColor;
 			}
 		}
         
-        cvReleaseImage(&imageColor);
+        // Quick dilation/erosion to smooth things out
+        IplImage *dilatedHandImage = cvCreateImage(cvGetSize(image), 8, 1);
+        cvDilate(thresholdedHandImage, dilatedHandImage, NULL, 4);
+        cvReleaseImage(&thresholdedHandImage);
         
-        imageView.image = [self UIImageFromIplImage:imageThreshed];
+        IplImage *erodedHandImage = cvCreateImage(cvGetSize(image), 8, 1);
+        cvErode(dilatedHandImage, erodedHandImage, NULL, 4);
+        cvReleaseImage(&dilatedHandImage);
+        
+        // Reconstruct the original hand
+        for (uint16_t y = 0; y < height; y++)
+        {
+			for (uint16_t x = 0; x < width; x++)
+            {
+				char* data = erodedHandImage->imageData + y * erodedHandImage->widthStep + x;
+                uint8_t currentData = data[0];
+                
+                if (currentData > 0)
+                {
+                    // This is the user's hand - use data from the original image
+                }
+                else
+                {
+                    char *p = image->imageData + y * image->widthStep + x * 3;
+                    *p = *(p+1) = *(p+2) = 0xFF;
+                }
+			}
+		}
+        
+        cvReleaseImage(&erodedHandImage);
+        
+        // Correct colors since UIImageFromIplImage is stupid about color byte order
+        IplImage *colorCorrectImage = cvCreateImage(cvGetSize(image), 8, 3);
+        cvCvtColor(image, colorCorrectImage, CV_BGR2RGB);
+        cvReleaseImage(&image);
+        
+        imageView.image = [self UIImageFromIplImage:colorCorrectImage];
         
 		[self hideProgressIndicator];
 	}
