@@ -7,304 +7,344 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21F9334A16881612009FF5CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9334916881612009FF5CA /* Cocoa.framework */; };
-		21F9335416881612009FF5CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335216881612009FF5CA /* InfoPlist.strings */; };
-		21F9335A16881612009FF5CA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335816881612009FF5CA /* Credits.rtf */; };
-		21F9336016881613009FF5CA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F9335E16881613009FF5CA /* MainMenu.xib */; };
-		21F9337D16881808009FF5CA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9337C16881808009FF5CA /* OpenGL.framework */; };
-		21F9337F16881C02009FF5CA /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F9337E16881C02009FF5CA /* GLUT.framework */; };
-		21F9338316881F42009FF5CA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F9338216881F42009FF5CA /* main.cpp */; };
+		540723DB0E3DD25B00B598A2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		540723DC0E3DD25B00B598A2 /* lena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5452E0090E3D08AA00FE4518 /* lena.jpg */; };
+		540723DE0E3DD25B00B598A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		540723DF0E3DD25B00B598A2 /* OpenCVTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* OpenCVTestAppDelegate.m */; };
+		540723E00E3DD25B00B598A2 /* OpenCVTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* OpenCVTestViewController.m */; };
+		540723E20E3DD25B00B598A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		540723E30E3DD25B00B598A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		540723E40E3DD25B00B598A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5452E0730E3D119700FE4518 /* CoreGraphics.framework */; };
+		540ABC6B0E3E1C5300E30885 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 540ABC6A0E3E1C5300E30885 /* haarcascade_frontalface_default.xml */; };
+		540ABCF60E3E280700E30885 /* Icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 540ABCF50E3E280700E30885 /* Icon_57.png */; };
+		543DC7641323FA0C00AB7DCD /* Icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 543DC7631323FA0C00AB7DCD /* Icon_114.png */; };
+		543DC7881323FD1300AB7DCD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 543DC7871323FD1300AB7DCD /* Default@2x.png */; };
+		543DC78A1323FD1C00AB7DCD /* Icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 543DC7891323FD1C00AB7DCD /* Icon_72.png */; };
+		5453EBCB135B8170007F724F /* libopencv_objdetect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5453EBCA135B8170007F724F /* libopencv_objdetect.a */; };
+		5453EBCF135B81C0007F724F /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5453EBCE135B81C0007F724F /* libopencv_imgproc.a */; };
+		5453EBD3135B82ED007F724F /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5453EBD2135B82ED007F724F /* libopencv_core.a */; };
+		549913C70E3E3D2100BD1311 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 549913C60E3E3D2100BD1311 /* Default.png */; };
+		54BBAF3D0F04148D00568ED9 /* Tink.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 54BBAF3C0F04148D00568ED9 /* Tink.aiff */; };
+		54BBAF4F0F0414C200568ED9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BBAF4E0F0414C200568ED9 /* AudioToolbox.framework */; };
+		54ED862C123C4A8B00ED9656 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ED862B123C4A8B00ED9656 /* Accelerate.framework */; };
+		54FC5BDE0E3EB3EB00F48645 /* laughing_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FC5BDD0E3EB3EB00F48645 /* laughing_man.png */; };
+		6DB1624817B74D4900439722 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1624717B74D4900439722 /* Default-568h@2x.png */; };
+		6DB1624B17B750CF00439722 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1624A17B750CF00439722 /* README.rst */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		212094F316882AA20054DE63 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		21F9334516881612009FF5CA /* Genjutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genjutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21F9334916881612009FF5CA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		21F9334C16881612009FF5CA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		21F9334D16881612009FF5CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		21F9334E16881612009FF5CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		21F9335116881612009FF5CA /* Genjutsu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Genjutsu-Info.plist"; sourceTree = "<group>"; };
-		21F9335316881612009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		21F9335716881612009FF5CA /* Genjutsu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Genjutsu-Prefix.pch"; sourceTree = "<group>"; };
-		21F9335916881612009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		21F9335F16881613009FF5CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		21F9336716881613009FF5CA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		21F9337C16881808009FF5CA /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
-		21F9337E16881C02009FF5CA /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
-		21F9338216881F42009FF5CA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* OpenCVTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVTestAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* OpenCVTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCVTestAppDelegate.m; sourceTree = "<group>"; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* OpenCVTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVTestViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* OpenCVTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCVTestViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		540723ED0E3DD25B00B598A2 /* Genjutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genjutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		540ABC6A0E3E1C5300E30885 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_default.xml; path = ../opencv_device/share/opencv/haarcascades/haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		540ABCF50E3E280700E30885 /* Icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_57.png; sourceTree = "<group>"; };
+		543DC7631323FA0C00AB7DCD /* Icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_114.png; sourceTree = "<group>"; };
+		543DC7871323FD1300AB7DCD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		543DC7891323FD1C00AB7DCD /* Icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_72.png; sourceTree = "<group>"; };
+		5452E0090E3D08AA00FE4518 /* lena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lena.jpg; sourceTree = "<group>"; };
+		5452E0730E3D119700FE4518 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5453EBCA135B8170007F724F /* libopencv_objdetect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_objdetect.a; path = opencv_simulator/lib/libopencv_objdetect.a; sourceTree = "<group>"; };
+		5453EBCE135B81C0007F724F /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = opencv_simulator/lib/libopencv_imgproc.a; sourceTree = "<group>"; };
+		5453EBD2135B82ED007F724F /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = opencv_simulator/lib/libopencv_core.a; sourceTree = "<group>"; };
+		549913C60E3E3D2100BD1311 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		54BBAF3C0F04148D00568ED9 /* Tink.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Tink.aiff; sourceTree = "<group>"; };
+		54BBAF4E0F0414C200568ED9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		54ED862B123C4A8B00ED9656 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		54FC5BDD0E3EB3EB00F48645 /* laughing_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laughing_man.png; sourceTree = "<group>"; };
+		6DB1624717B74D4900439722 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6DB1624917B7503F00439722 /* Genjutsu_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genjutsu_Prefix.pch; sourceTree = "<group>"; };
+		6DB1624A17B750CF00439722 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		21F9334216881612009FF5CA /* Frameworks */ = {
+		540723E10E3DD25B00B598A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F9337F16881C02009FF5CA /* GLUT.framework in Frameworks */,
-				21F9337D16881808009FF5CA /* OpenGL.framework in Frameworks */,
-				21F9334A16881612009FF5CA /* Cocoa.framework in Frameworks */,
+				540723E20E3DD25B00B598A2 /* Foundation.framework in Frameworks */,
+				540723E30E3DD25B00B598A2 /* UIKit.framework in Frameworks */,
+				540723E40E3DD25B00B598A2 /* CoreGraphics.framework in Frameworks */,
+				54BBAF4F0F0414C200568ED9 /* AudioToolbox.framework in Frameworks */,
+				54ED862C123C4A8B00ED9656 /* Accelerate.framework in Frameworks */,
+				5453EBCB135B8170007F724F /* libopencv_objdetect.a in Frameworks */,
+				5453EBCF135B81C0007F724F /* libopencv_imgproc.a in Frameworks */,
+				5453EBD3135B82ED007F724F /* libopencv_core.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21F93335168815A5009FF5CA = {
+		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				21F9334F16881612009FF5CA /* Genjutsu */,
-				21F9334816881612009FF5CA /* Frameworks */,
-				21F9334616881612009FF5CA /* Products */,
+				1D3623240D0F684500981E51 /* OpenCVTestAppDelegate.h */,
+				1D3623250D0F684500981E51 /* OpenCVTestAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* OpenCVTestViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* OpenCVTestViewController.m */,
 			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		21F9334616881612009FF5CA /* Products */ = {
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21F9334516881612009FF5CA /* Genjutsu.app */,
+				540723ED0E3DD25B00B598A2 /* Genjutsu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		21F9334816881612009FF5CA /* Frameworks */ = {
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				21F9337E16881C02009FF5CA /* GLUT.framework */,
-				21F9337C16881808009FF5CA /* OpenGL.framework */,
-				21F9334916881612009FF5CA /* Cocoa.framework */,
-				21F9336716881613009FF5CA /* SenTestingKit.framework */,
-				21F9334B16881612009FF5CA /* Other Frameworks */,
+				6DB1624A17B750CF00439722 /* README.rst */,
+				6DB1624717B74D4900439722 /* Default-568h@2x.png */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				540723F00E3DD28C00B598A2 /* Libraries */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1624917B7503F00439722 /* Genjutsu_Prefix.pch */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				549913C60E3E3D2100BD1311 /* Default.png */,
+				543DC7871323FD1300AB7DCD /* Default@2x.png */,
+				540ABCF50E3E280700E30885 /* Icon_57.png */,
+				543DC7891323FD1C00AB7DCD /* Icon_72.png */,
+				543DC7631323FA0C00AB7DCD /* Icon_114.png */,
+				5452E0090E3D08AA00FE4518 /* lena.jpg */,
+				54FC5BDD0E3EB3EB00F48645 /* laughing_man.png */,
+				54BBAF3C0F04148D00568ED9 /* Tink.aiff */,
+				540ABC6A0E3E1C5300E30885 /* haarcascade_frontalface_default.xml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54BBAF4E0F0414C200568ED9 /* AudioToolbox.framework */,
+				5452E0730E3D119700FE4518 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				54ED862B123C4A8B00ED9656 /* Accelerate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21F9334B16881612009FF5CA /* Other Frameworks */ = {
+		540723F00E3DD28C00B598A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				21F9334C16881612009FF5CA /* AppKit.framework */,
-				21F9334D16881612009FF5CA /* CoreData.framework */,
-				21F9334E16881612009FF5CA /* Foundation.framework */,
+				5453EBD2135B82ED007F724F /* libopencv_core.a */,
+				5453EBCE135B81C0007F724F /* libopencv_imgproc.a */,
+				5453EBCA135B8170007F724F /* libopencv_objdetect.a */,
 			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		21F9334F16881612009FF5CA /* Genjutsu */ = {
-			isa = PBXGroup;
-			children = (
-				21F9335E16881613009FF5CA /* MainMenu.xib */,
-				21F9335016881612009FF5CA /* Supporting Files */,
-				21F9338216881F42009FF5CA /* main.cpp */,
-				212094F316882AA20054DE63 /* main.h */,
-			);
-			path = Genjutsu;
-			sourceTree = "<group>";
-		};
-		21F9335016881612009FF5CA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				21F9335116881612009FF5CA /* Genjutsu-Info.plist */,
-				21F9335216881612009FF5CA /* InfoPlist.strings */,
-				21F9335716881612009FF5CA /* Genjutsu-Prefix.pch */,
-				21F9335816881612009FF5CA /* Credits.rtf */,
-			);
-			name = "Supporting Files";
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21F9334416881612009FF5CA /* Genjutsu */ = {
+		540723D90E3DD25B00B598A2 /* Genjutsu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21F9337916881613009FF5CA /* Build configuration list for PBXNativeTarget "Genjutsu" */;
+			buildConfigurationList = 540723EA0E3DD25B00B598A2 /* Build configuration list for PBXNativeTarget "Genjutsu" */;
 			buildPhases = (
-				21F9334116881612009FF5CA /* Sources */,
-				21F9334216881612009FF5CA /* Frameworks */,
-				21F9334316881612009FF5CA /* Resources */,
+				540723DA0E3DD25B00B598A2 /* Resources */,
+				540723DD0E3DD25B00B598A2 /* Sources */,
+				540723E10E3DD25B00B598A2 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Genjutsu;
-			productName = Genjutsu;
-			productReference = 21F9334516881612009FF5CA /* Genjutsu.app */;
+			productName = OpenCVTest;
+			productReference = 540723ED0E3DD25B00B598A2 /* Genjutsu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		21F93337168815A5009FF5CA /* Project object */ = {
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 21F9333A168815A5009FF5CA /* Build configuration list for PBXProject "Genjutsu" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Genjutsu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 0;
+			hasScannedForEncodings = 1;
 			knownRegions = (
-				en,
+				English,
+				Japanese,
+				French,
+				German,
 			);
-			mainGroup = 21F93335168815A5009FF5CA;
-			productRefGroup = 21F9334616881612009FF5CA /* Products */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21F9334416881612009FF5CA /* Genjutsu */,
+				540723D90E3DD25B00B598A2 /* Genjutsu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		21F9334316881612009FF5CA /* Resources */ = {
+		540723DA0E3DD25B00B598A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F9335416881612009FF5CA /* InfoPlist.strings in Resources */,
-				21F9335A16881612009FF5CA /* Credits.rtf in Resources */,
-				21F9336016881613009FF5CA /* MainMenu.xib in Resources */,
+				540723DB0E3DD25B00B598A2 /* MainWindow.xib in Resources */,
+				540723DC0E3DD25B00B598A2 /* lena.jpg in Resources */,
+				540ABC6B0E3E1C5300E30885 /* haarcascade_frontalface_default.xml in Resources */,
+				540ABCF60E3E280700E30885 /* Icon_57.png in Resources */,
+				549913C70E3E3D2100BD1311 /* Default.png in Resources */,
+				54FC5BDE0E3EB3EB00F48645 /* laughing_man.png in Resources */,
+				54BBAF3D0F04148D00568ED9 /* Tink.aiff in Resources */,
+				543DC7641323FA0C00AB7DCD /* Icon_114.png in Resources */,
+				543DC7881323FD1300AB7DCD /* Default@2x.png in Resources */,
+				543DC78A1323FD1C00AB7DCD /* Icon_72.png in Resources */,
+				6DB1624817B74D4900439722 /* Default-568h@2x.png in Resources */,
+				6DB1624B17B750CF00439722 /* README.rst in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21F9334116881612009FF5CA /* Sources */ = {
+		540723DD0E3DD25B00B598A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F9338316881F42009FF5CA /* main.cpp in Sources */,
+				540723DE0E3DD25B00B598A2 /* main.m in Sources */,
+				540723DF0E3DD25B00B598A2 /* OpenCVTestAppDelegate.m in Sources */,
+				540723E00E3DD25B00B598A2 /* OpenCVTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		21F9335216881612009FF5CA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21F9335316881612009FF5CA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		21F9335816881612009FF5CA /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21F9335916881612009FF5CA /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		21F9335E16881613009FF5CA /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21F9335F16881613009FF5CA /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		21F9333C168815A5009FF5CA /* Debug */ = {
+		540723EB0E3DD25B00B598A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Genjutsu_Prefix.pch;
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/include\"";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/include\"";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/lib\"";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+				);
+				PRODUCT_NAME = Genjutsu;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		21F9333D168815A5009FF5CA /* Release */ = {
+		540723EC0E3DD25B00B598A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Genjutsu_Prefix.pch;
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/include\"";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/include\"";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/lib\"";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+				);
+				PRODUCT_NAME = Genjutsu;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		21F9337516881613009FF5CA /* Debug */ = {
+		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Genjutsu/Genjutsu-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Genjutsu/Genjutsu-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		21F9337616881613009FF5CA /* Release */ = {
+		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Genjutsu/Genjutsu-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Genjutsu/Genjutsu-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21F9333A168815A5009FF5CA /* Build configuration list for PBXProject "Genjutsu" */ = {
+		540723EA0E3DD25B00B598A2 /* Build configuration list for PBXNativeTarget "Genjutsu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21F9333C168815A5009FF5CA /* Debug */,
-				21F9333D168815A5009FF5CA /* Release */,
+				540723EB0E3DD25B00B598A2 /* Debug */,
+				540723EC0E3DD25B00B598A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21F9337916881613009FF5CA /* Build configuration list for PBXNativeTarget "Genjutsu" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Genjutsu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				21F9337516881613009FF5CA /* Debug */,
-				21F9337616881613009FF5CA /* Release */,
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 21F93337168815A5009FF5CA /* Project object */;
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
