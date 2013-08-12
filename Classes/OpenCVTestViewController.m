@@ -37,7 +37,6 @@
 
 // NOTE You should convert color mode as RGB before passing to this function
 - (UIImage *)UIImageFromIplImage:(IplImage *)image {
-	NSLog(@"IplImage (%d, %d) %d bits by %d channels, %d bytes/row %s", image->width, image->height, image->depth, image->nChannels, image->widthStep, image->channelSeq);
 
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	NSData *data = [NSData dataWithBytes:image->imageData length:image->imageSize];
@@ -57,7 +56,6 @@
 #pragma mark Utilities for intarnal use
 
 - (void)showProgressIndicator:(NSString *)text {
-	//[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	self.view.userInteractionEnabled = FALSE;
 	if(!progressHUD) {
 		CGFloat w = 160.0f, h = 120.0f;
@@ -124,27 +122,19 @@
         cvErode(dilatedHandImage, erodedHandImage, NULL, 4);
         cvReleaseImage(&dilatedHandImage);
         
-        // Reconstruct the original hand
-        for (uint16_t y = 0; y < height; y++)
-        {
-			for (uint16_t x = 0; x < width; x++)
-            {
-				char* data = erodedHandImage->imageData + y * erodedHandImage->widthStep + x;
-                uint8_t currentData = data[0];
-                
-                if (currentData > 0)
-                {
-                    // This is the user's hand - use data from the original image
-                }
-                else
-                {
-                    char *p = image->imageData + y * image->widthStep + x * 3;
-                    *p = *(p+1) = *(p+2) = 0xFF;
-                }
-			}
-		}
+        // Draw contours
+        CvMemStorage *mem = cvCreateMemStorage(0);
+        CvSeq *contours = 0;
         
+        // Use either this:
+        cvFindContours(erodedHandImage, mem, &contours, sizeof(CvContour), CV_RETR_CCOMP, CV_CHAIN_APPROX_NONE, cvPoint(0,0));
         cvReleaseImage(&erodedHandImage);
+        //int n = cvFindContours(gray, mem, &contours, sizeof(CvContour), CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE, cvPoint(0,0));
+
+        for (; contours != 0; contours = contours->h_next)
+        {
+            cvDrawContours(image, contours, CV_RGB(255,255,255), CV_RGB(0,0,0), 0, 2, 8, cvPoint(0,0));
+        }
         
         // Correct colors since UIImageFromIplImage is stupid about color byte order
         IplImage *colorCorrectImage = cvCreateImage(cvGetSize(image), 8, 3);
