@@ -29,7 +29,6 @@
 		54FC5BDE0E3EB3EB00F48645 /* laughing_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FC5BDD0E3EB3EB00F48645 /* laughing_man.png */; };
 		6DADB12E17B7758E00D2D9E1 /* test_hand_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DADB12C17B7758E00D2D9E1 /* test_hand_1.jpg */; };
 		6DADB13117B775C700D2D9E1 /* test_hand_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DADB13017B775C700D2D9E1 /* test_hand_2.jpg */; };
-		6DB1624817B74D4900439722 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1624717B74D4900439722 /* Default-568h@2x.png */; };
 		6DB1624B17B750CF00439722 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1624A17B750CF00439722 /* README.rst */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		54FC5BDD0E3EB3EB00F48645 /* laughing_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laughing_man.png; sourceTree = "<group>"; };
 		6DADB12C17B7758E00D2D9E1 /* test_hand_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_hand_1.jpg; sourceTree = "<group>"; };
 		6DADB13017B775C700D2D9E1 /* test_hand_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_hand_2.jpg; sourceTree = "<group>"; };
-		6DB1624717B74D4900439722 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6DB1624917B7503F00439722 /* Genjutsu_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genjutsu_Prefix.pch; sourceTree = "<group>"; };
 		6DB1624A17B750CF00439722 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				6DB1624A17B750CF00439722 /* README.rst */,
-				6DB1624717B74D4900439722 /* Default-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -237,7 +234,6 @@
 				543DC7641323FA0C00AB7DCD /* Icon_114.png in Resources */,
 				543DC7881323FD1300AB7DCD /* Default@2x.png in Resources */,
 				543DC78A1323FD1C00AB7DCD /* Icon_72.png in Resources */,
-				6DB1624817B74D4900439722 /* Default-568h@2x.png in Resources */,
 				6DB1624B17B750CF00439722 /* README.rst in Resources */,
 				6DADB12E17B7758E00D2D9E1 /* test_hand_1.jpg in Resources */,
 				6DADB13117B775C700D2D9E1 /* test_hand_2.jpg in Resources */,
